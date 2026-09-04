@@ -1,5 +1,4 @@
-# RaceDay Event Management System 
-# RaceDay Platform - Sports Technology Architecture
+# RaceDay Event Management System
  
 ## System Description
 South Africa hosts hundreds of iconic community walks, park runs, and charity cycling events every weekend. The RaceDay platform is a modernized, cloud-aware backend solution built to streamline the operations of these events. Moving away from spreadsheets, this platform manages user roles, event scheduling, sponsorships, category distances, and participant tracking. Part 1 focuses on designing a robust, normalized relational database and mapping out the RESTful API endpoints that will drive the frontend applications.
