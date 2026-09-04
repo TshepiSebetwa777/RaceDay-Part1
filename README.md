@@ -19,5 +19,6 @@ To initialize the backend database for this project:
 ## Automated Workflow Status
 ![GitHub Actions Passing](./docs/build-passing.jpeg)
  
+ 
 ## Walkthrough Video
 [Insert Unlisted YouTube Video Link Here]
