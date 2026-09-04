@@ -17,8 +17,7 @@ To initialize the backend database for this project:
 5. The system's API endpoints and database ERD can be reviewed in the `/docs` directory.
  
 ## Automated Workflow Status
-![GitHub Actions Passing](./docs/build-passing.png)
-*(Note to student: Save your green checkmark screenshot as 'build-passing.png' in the /docs folder so it displays here)*
+![GitHub Actions Passing](./docs/build-passing.jpeg)
  
 ## Walkthrough Video
 [Insert Unlisted YouTube Video Link Here]
