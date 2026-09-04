@@ -3,7 +3,7 @@ CREATE DATABASE RaceDayDB;
 GO
 USE RaceDayDB;
 GO
-
+ 
 -- 1. Roles Table
 CREATE TABLE Roles (
     RoleID INT IDENTITY(1,1) PRIMARY KEY,
@@ -66,7 +66,11 @@ CREATE TABLE Results (
     MedalType VARCHAR(50) NOT NULL,
     FOREIGN KEY (EnrolmentID) REFERENCES Enrolments(EnrolmentID)
 );
-
+ 
+-- ==========================================
+-- SEED DATA 
+-- ==========================================
+ 
 -- Seed Roles
 INSERT INTO Roles (RoleName) VALUES ('Organiser'), ('Participant');
  
