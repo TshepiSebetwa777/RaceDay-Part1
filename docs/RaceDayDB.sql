@@ -66,3 +66,50 @@ CREATE TABLE Results (
     MedalType VARCHAR(50) NOT NULL,
     FOREIGN KEY (EnrolmentID) REFERENCES Enrolments(EnrolmentID)
 );
+
+-- Seed Roles
+INSERT INTO Roles (RoleName) VALUES ('Organiser'), ('Participant');
+ 
+-- Seed Users (2 Organisers, 2 Participants)
+INSERT INTO Users (RoleID, FullName, EmailAddress, PasswordHash)
+VALUES 
+(1, 'David Meyer', 'david@raceadmin.co.za', 'hashed_pass'),
+(1, 'Lerato Khumalo', 'lerato@raceadmin.co.za', 'hashed_pass'),
+(2, 'Sipho Ndlovu', 'sipho.runner@gmail.com', 'hashed_pass'),
+(2, 'Alice Johnson', 'alice.cycles@gmail.com', 'hashed_pass');
+ 
+-- Seed Events (3 Events) based on SA culture
+INSERT INTO Events (OrganiserID, Title, ScheduledDate, Description)
+VALUES 
+(1, 'Two Oceans Marathon 2026', '2026-04-10', 'The worlds most beautiful marathon.'),
+(2, '947 Ride Joburg 2026', '2026-11-15', 'Tough urban cycling event in Johannesburg.'),
+(1, 'Sanlam Cape Town Marathon', '2026-10-18', 'A prestigious gold label status marathon.');
+ 
+-- Seed Sponsors
+INSERT INTO Sponsors (EventID, CompanyName, SponsorshipTier)
+VALUES 
+(1, 'Old Mutual', 'Gold'),
+(2, 'Virgin Active', 'Silver');
+ 
+-- Seed Categories
+INSERT INTO Categories (EventID, TypeName, DistanceKM)
+VALUES 
+(1, 'Ultra Marathon', 56.00),
+(1, 'Half Marathon', 21.10),
+(2, 'Full Route', 97.00),
+(3, 'Marathon', 42.20),
+(3, 'Peace Run', 10.00);
+ 
+-- Seed Enrolments
+INSERT INTO Enrolments (UserID, CategoryID, Status)
+VALUES 
+(3, 2, 'Confirmed'), -- Sipho in Two Oceans Half
+(4, 3, 'Confirmed'), -- Alice in 947 Ride Joburg
+(3, 5, 'Confirmed'); -- Sipho in Cape Town Peace Run
+ 
+-- Seed Results
+INSERT INTO Results (EnrolmentID, TimeRecorded, MedalType)
+VALUES 
+(1, '01:50:23', 'Silver'),
+(2, '03:15:40', 'Bronze');
+GO
